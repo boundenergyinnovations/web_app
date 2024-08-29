@@ -26,6 +26,23 @@ export OPENAI_ASSISTANT_ID=asst_xxxxxxxx
 export SHEET_ID=xxxxxxxxxx *if using the appropriate app version
 ```
 
+install HTTPS SSL CERT with certbot:
+```sh
+sudo apt update
+sudo apt install certbot python3-certbot-nginx
+```
+
+Get the cert *replace example.com with your url:
+```sh
+sudo certbot --nginx -d example.com
+```
+
+Check the cert:
+```sh
+sudo certbot certificates
+```
+
+
 ## Usage
 TO TEST:
 ```sh
