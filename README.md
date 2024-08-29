@@ -1,4 +1,4 @@
-# Table of Contents
+# bei - web_app  
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
