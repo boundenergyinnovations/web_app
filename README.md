@@ -13,7 +13,7 @@ Very long story short, I grew up seeing people taken advantage of in the late 90
 ## Installation
 NEED: AWS account, OpenAI account, api key, assistant id. If using Google Sheets version: gsheet id, gsheet json cred file eg. chatsheet-xxxxxx-xxxxxxx.json,
 Start EC2 with Ubuntu and settings for access to public HTTP/HTTPS, will need to set networking.  
-download and run setup_webapp_server.sh *get url
+download and run setup_webapp_server.sh *n.t.s. get url and post here
 ```sh
 ./setup_webapp_server.sh
 ```
