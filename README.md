@@ -10,16 +10,19 @@ bei Founder/Lead Dev here,
 
 Very long story short, I grew up seeing people taken advantage of in the late 90s early 00s with the SEO craze and other stuff when I first got into computers and saw that I could code things people were charging hundreds or thousands for. I was too young and too dumb to be able to do anything about it then. Well.. I'm not too young and hopefully not too dumb to do something about it now. I am seeing people/companies charging, and I am not exaggerating, over 1800% markup on services. Many sites and services are taking advantage of the AI hype and people.  I am building and releasing open source web apps, custom servers, scripts, chatbots, business software, etc. for people and small businesses to use. For small local businesses that maybe get a few users at a time, this will work just fine. People can: chat with your company info, easy builtin messaging, dynamic loading of videos/media. Easily customizable and easy to add functionality in code with Python. Basic rate limited is implemented (to protect against abuse of the chatbot). The idea is you have a bit of static info/text/an introduction at the top, a chat section to answer any questions about the site/person/topic with messaging built in, and a video section because people would rather have information delivered by video *look up the statistics of retention of a video vs a few paragraphs of text, lol. 
 
-App Files:
-web_app_gsheet.py    -- Google Sheets, messages automatically populate in your sheet.
-web_app_localmsg.py  -- Creates a file in the same directory as the app and stores messages with timestamp
-web_app_no_sheet.py  -- Add your own message functionality 
+App Files:  
+web_app_gsheet.py    -- Google Sheets, messages automatically populate in your sheet.  
+web_app_localmsg.py  -- Creates a file in the same directory as the app and stores messages with timestamp  
+web_app_no_sheet.py  -- Add your own message functionality  
 
 
 ## Installation
 NEED: AWS account, OpenAI account, api key, assistant id. If using Google Sheets version: gsheet id, gsheet json cred file eg. chatsheet-xxxxxx-xxxxxxx.json,
+
 Start EC2 with Ubuntu and settings for access to public HTTP/HTTPS, will need to set networking.  
+
 download and run setup_webapp_server.sh *n.t.s. get url and post here
+
 ```sh
 ./setup_webapp_server.sh
 ```
