@@ -15,6 +15,8 @@ web_app_gsheet.py    -- Google Sheets, messages automatically populate in your s
 web_app_localmsg.py  -- Creates a file in the same directory as the app and stores messages with timestamp  
 web_app_no_sheet.py  -- Add your own message functionality or leave out
 
+We are using the app, if you wish to see a similar demo: https://boundenergyinnovations.com
+
 
 ## Installation
 NEED: AWS account, OpenAI account, api key, assistant id. If using Google Sheets version: gsheet id, gsheet json cred file eg. chatsheet-xxxxxx-xxxxxxx.json,
