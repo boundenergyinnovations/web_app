@@ -1,2 +1,63 @@
-# web_app
-Easy to use/edit chatbot web app. Connect to OpenAI assistant and vector database. Multiple ways to message including a Google Sheets implementation. 
+# Table of Contents
+
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+
+## Introduction
+Very long story short, I grew up seeing people taken advantage of in the late 90s early 00s with the SEO craze and other stuff when I first got into computers and saw that I could code things people were charging hundreds or thousands for.  I was too young and too dumb to be able to do anything about it then. Well.. I'm not too young and hopefully not too dumb to do something about it now.  We are building and releasing open source web apps, custom servers, scripts, etc. for people and small businesses to use. For small local businesses that maybe get a few users at a time, this will work just fine. Easily customizable and easy to add addition functionality in code with Python. Basic rate limited is implemented. The idea is you have a bit of static info/text/an introduction at the top, a chat section to answer any questions about the site/person/topic, and a video section because people would rather have information delivered by video *look up the statistics of retention of a video vs two paragraphs of text, lol.
+
+## Installation
+NEED: AWS account, OpenAI account, api key, assistant id. If using Google Sheets version: gsheet id, gsheet json cred file eg. chatsheet-xxxxxx-xxxxxxx.json,
+Start EC2 with Ubuntu and settings for access to public HTTP/HTTPS, will need to set networking.  
+download and run setup_webapp_server.sh *get url
+```sh
+./setup_webapp_server.sh
+```
+
+```sh
+source /venv/bin/activate
+```
+
+```sh
+export OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxx
+export OPENAI_ASSISTANT_ID=asst_xxxxxxxx
+export SHEET_ID=xxxxxxxxxx *if using the appropriate app version
+```
+
+## Usage
+TO TEST:
+```sh
+python3 web_app_xxx.py
+```
+
+TO RUN:
+```sh
+nohup python3 web_app_xxx.py &
+```
+*this allows you to close the terminal keep it running
+
+While logged in you can run:
+```sh
+jobs
+```
+this will show it currently running, type the number to select, generally '1' then CTRL-C to stop.
+
+Or: 
+```sh
+ps -aux
+````
+to show what's running, then:
+```sh
+kill #
+```
+where # is the PID. eg. 'kill 66123'
+
+
+## Contributing
+The more the merrier. Any issues, give context. 
+
+
+
+
