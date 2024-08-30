@@ -48,8 +48,8 @@ sudo apt install -y python3.10-venv
 # Create a Python virtual environment
 python3 -m venv venv
 
-# Activate the virtual environment
-source venv/bin/activate
-
-# Install Python packages from requirements.txt (ensure you have the requirements.txt in the correct directory)
-pip install -r requirements.txt
+wget -O - https://raw.githubusercontent.com/boundenergyinnovations/web_app/main/web_app_no_sheet.py
+wget -O - https://raw.githubusercontent.com/boundenergyinnovations/web_app/main/web_app_gsheet.py
+wget -O - https://raw.githubusercontent.com/boundenergyinnovations/web_app/main/web_app_localmsg.py
+wget -O - https://raw.githubusercontent.com/boundenergyinnovations/web_app/main/beartheme.json
+wget -O - https://raw.githubusercontent.com/boundenergyinnovations/web_app/main/requirements.txt
