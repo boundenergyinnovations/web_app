@@ -6,9 +6,7 @@
 4. [Contributing](#contributing)
 
 ## Introduction
-bei Founder/Lead Dev here,
-
-Very long story short, I grew up seeing people taken advantage of in the late 90s early 00s with the SEO craze and other stuff when I first got into computers and saw that I could code things people were charging hundreds or thousands for. I was too young and too dumb to be able to do anything about it then. Well.. I'm not too young and hopefully not too dumb to do something about it now. I am seeing people/companies charging, and I am not exaggerating, over 1800% markup on services. Many sites and services are taking advantage of the AI hype and people.  I am building and releasing open source web apps, custom servers, scripts, chatbots, business software, etc. for people and small businesses to use. For small local businesses that maybe get a few users at a time, this will work just fine. People can: chat with your company info, easy builtin messaging, dynamic loading of videos/media. Easily customizable and easy to add functionality in code with Python. Basic rate limited is implemented (to protect against abuse of the chatbot). The idea is you have a bit of static info/text/an introduction at the top, a chat section to answer any questions about the site/person/topic with messaging built in, and a video section because people would rather have information delivered by video *look up the statistics of retention of a video vs a few paragraphs of text, lol. 
+Many sites and services are taking advantage of the AI hype and people.  We are building and releasing open source web apps, custom servers, scripts, chatbots, business software, etc. for people and small businesses to use. For small local businesses that maybe get a few users at a time, this will work just fine. Users can: chat with your company info, message in the chat interface, dynamically load videos/media. Easily customizable and easy to add functionality in code with Python. Basic rate limited is implemented (to protect against abuse of the chatbot). The idea is you have a bit of static info/text/an introduction at the top, a chat section to answer any questions about the site/person/topic with messaging built in, and a video section because people would rather have information delivered by video *look up the statistics of retention of a video vs a few paragraphs of text, lol.  
 
 App Files, 3 ways to recieve messages:  
 web_app_gsheet.py    -- Google Sheets, messages automatically populate in your sheet.  
@@ -21,31 +19,56 @@ We are using the app, if you wish to see a similar demo: https://boundenergyinno
 ## Installation
 NEED: AWS account, OpenAI account, api key, assistant id. If using Google Sheets version: gsheet id, gsheet json cred file eg. chatsheet-xxxxxx-xxxxxxx.json,
 
-Start EC2 with Ubuntu and settings for access to public HTTP/HTTPS, will need to set networking.  
+Start EC2/server with Ubuntu and settings for access to public HTTP/HTTPS, will need to set networking/VPC <-- video incomming.  
 
-download and run setup_webapp_server.sh *n.t.s. get url and post here
-
+Create dir:
 ```sh
-./setup_webapp_server.sh
+mkdir app_dir
+cd app_dir
 ```
 
+Run setup script:
 ```sh
-source /venv/bin/activate
+sh <(curl https://raw.githubusercontent.com/boundenergyinnovations/web_app/main/setup_webapp_server.sh || wget -O - https://raw.githubusercontent.com/boundenergyinnovations/web_app/main/setup_webapp_server.sh)
 ```
 
+Edit Ngninx config:
+```sh
+cd /etc/nginx/sites-available/
+sudo nano gradio
+```
+Put your public IP or domain name in the file
+
+Reload Nginx:
+```sh
+sudo systemctl reload nginx
+```
+
+Move back home and go virtual:
+```sh
+cd ~/app_dir
+source venv/bin/activate
+```
+
+Install reqs:
+```sh
+pip install -r requirements.txt
+```
+Set keys/ids:
 ```sh
 export OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxx
 export OPENAI_ASSISTANT_ID=asst_xxxxxxxx
 export SHEET_ID=xxxxxxxxxx *if using the appropriate app version
 ```
 
-install HTTPS SSL CERT with certbot:
+OPTIONAL:
+Install HTTPS SSL CERT with certbot:
 ```sh
 sudo apt update
 sudo apt install certbot python3-certbot-nginx
 ```
 
-Get the cert *replace example.com with your url:
+Get the cert *replace example.com with your url and don't forget to edit the Nginx config in /etc/nginx/sites-available/:
 ```sh
 sudo certbot --nginx -d example.com
 ```
