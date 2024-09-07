@@ -13,6 +13,8 @@ web_app_gsheet.py    -- Google Sheets, messages automatically populate in your s
 web_app_localmsg.py  -- Creates a file in the same directory as the app and stores messages with timestamp  
 web_app_no_sheet.py  -- Add your own message functionality or leave out
 
+Work in progress: hotel_airtable_app.py   -- It's working, need to set Airtable ids, and table name in system variable or live crazy and set in file. Includes Google Sheets and OpenAI assistant vector database integrations. Set your sheet creds json file and sheet id in app file. The exapmle app checks name and phone number in the database, if there is a match retrieve the reservation. Edit as needed.
+
 We are using the app, if you wish to see a similar demo: https://boundenergyinnovations.com
 
 
