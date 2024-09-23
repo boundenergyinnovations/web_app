@@ -8,6 +8,10 @@
 ## Introduction
 Many sites and services are taking advantage of the AI hype and people.  We are building and releasing open source web apps, custom servers, scripts, chatbots, business software, etc. for people and small businesses to use. For small local businesses that maybe get a few users at a time, this will work just fine. Users can: chat with your company info, message in the chat interface, dynamically load videos/media. Easily customizable and easy to add functionality in code with Python. Basic rate limited is implemented (to protect against abuse of the chatbot). The idea is you have a bit of static info/text/an introduction at the top, a chat section to answer any questions about the site/person/topic with messaging built in, and a video section because people would rather have information delivered by video *look up the statistics of retention of a video vs a few paragraphs of text, lol.  
 
+Web App Install::  
+[![Web App Install](https://img.youtube.com/vi/jS-0qPwYQ3w/0.jpg)](https://www.youtube.com/watch?v=jS-0qPwYQ3w)
+
+
 App Files, 3 ways to recieve messages:  
 web_app_gsheet.py    -- Google Sheets, messages automatically populate in your sheet.  
 web_app_localmsg.py  -- Creates a file in the same directory as the app and stores messages with timestamp  
